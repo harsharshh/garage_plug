@@ -1,0 +1,84 @@
+<section class="container-fluid mt-5 pt-5">
+  <div class="row ">
+    <div class="col-12">
+      <h2 class="text-center">
+        Prices
+      </h2>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-md-6 offset-md-3">
+      <div class="row">
+        <div class="col-12">
+          <div class="float-left">
+            <h5 class="my-4 font-weight-normal">Selected Devices</h5>
+          </div>
+          <div class="float-right">
+            <button nbButton size="large" status="info" outline [routerLink]="'../service'" class="bg-white ml-4">Add /
+              Change
+            </button>
+          </div>
+        </div>
+
+      </div>
+      <div class="row" *ngIf="serviceData; else noDatFound">
+        <div class="col-xl-4 col-md-6 col-sm-6 col-xs-6  d-flex justify-content-center align-items-center"
+             *ngFor="let data of serviceData">
+          <app-card [data]="data"></app-card>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col-md-6 offset-md-3">
+      <div class="row">
+        <div class="col-12">
+          <h5 class="my-4 font-weight-normal">Car Size</h5>
+        </div>
+      </div>
+      <div class="row" *ngIf="carData; else noDatFound">
+        <div class="col-xl-4 col-md-6 col-sm-6 col-xs-6  d-flex justify-content-center align-items-center"
+             *ngFor="let data of carData">
+          <app-card [data]="data"></app-card>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col-md-6 offset-md-3">
+      <hr style="height:2px;border:none;color:#cacaca;background-color:#cacaca;"/>
+    </div>
+    <div class="col-md-6 offset-md-3  mt-4">
+      <div class="row">
+        <div class="col-6">
+          <h1 class="text-left">
+            Total
+          </h1>
+        </div>
+        <div class="col-6">
+          <h1 class="text-right">
+            {{( serviceData && carData ? (random*carData.length): 0) | currency:'₹'}}
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row my-5">
+    <div class="col-12 d-flex justify-content-center align-items-center">
+      <button nbButton outline status="info" size="giant" class="bg-white">Continue</button>
+    </div>
+
+  </div>
+</section>
+
+
+<ng-template #noDatFound>
+  <div class="row">
+    <div class="col-12">
+      <h6 class="text-center m-4">
+        No Data Found
+      </h6>
+
+    </div>
+  </div>
+</ng-template>

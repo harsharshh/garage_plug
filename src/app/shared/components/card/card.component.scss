@@ -1,0 +1,9 @@
+@import '../../../@theme/styles/bootstrap_variables';
+
+.cards {
+  cursor: pointer !important;
+  &:hover , &.active {
+    background-color: $secondary !important;
+  }
+
+}

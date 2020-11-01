@@ -1,0 +1,33 @@
+<nb-card class="bg-light cards d-md-flex d-none" size="small" style="border-radius: 0.6rem; width:10rem;height: 10rem;"
+         (click)="setActive(data)" [ngClass]="(data?.selected == true)? 'active' : null">
+  <nb-card-body>
+    <div class="container-fluid h-100">
+      <div class="row h-100">
+        <div class="col d-flex justify-content-center align-items-center">
+          <div class="align-self-center">
+            <img class="w-100" [src]="data?.imageUrl" style="max-height: 8rem; max-width: 8rem"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nb-card-body>
+</nb-card>
+<h6 class="text-center mt-n4 mb-4 font-weight-normal d-md-block d-none">{{data?.title}}</h6>
+
+<nb-card class="bg-light cards d-md-none d-flex" size="small" style="border-radius: 0.6rem; width:8rem;height: 8rem;"
+         (click)="setActive(data)" [ngClass]="(data?.selected == true) ? 'active' : null">
+  <nb-card-body>
+    <div class="container-fluid h-100">
+      <div class="row h-100">
+        <div class="col d-flex justify-content-center align-items-center">
+          <div class="align-self-center">
+            <img class="w-100" [src]="data?.imageUrl" style="max-height: 4rem; max-width: 4rem"/>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </nb-card-body>
+</nb-card>
+<h6 class="text-center mt-n4 mb-4 font-weight-normal  d-md-none d-block">{{data?.title}}</h6>
+
