@@ -1,1 +1,72 @@
-<p>contact works!</p>
+<section class="container-fluid mt-5 pt-5">
+  <div class="row ">
+    <div class="col-12">
+      <h2 class="text-center  animate__animated animate__slideInDown">
+        Contact
+      </h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="container-fluid">
+        <form>
+          <div class="row mt-5">
+            <div class="col-md-6 form-group">
+              <label>First name</label>
+              <input nbInput outline status="info" class="form-control bg-white"/>
+            </div>
+            <div class="col-md-6 form-group">
+              <label>Last name</label>
+              <input nbInput outline status="info" class="form-control bg-white"/>
+            </div>
+            <div class="col-md-6 form-group">
+              <label>Email</label>
+              <input nbInput outline status="info" class="form-control bg-white"/>
+            </div>
+            <div class="col-md-6 form-group">
+              <label>Phone</label>
+              <input nbInput outline status="info" class="form-control bg-white"/>
+            </div>
+            <div class="col-md-12 form-group">
+              <label>Service Date & Time</label>
+              <input type="datetime-local" nbInput outline status="info" class="form-control bg-white"/>
+            </div>
+
+          </div>
+          <hr style="height:2px;border:none;color:rgba(81,81,81,0.99);background-color:rgba(53,53,53,0.98);"/>
+          <div class="row">
+            <div class="col-md-12 form-group">
+              <label>Select Payement Method</label>
+              <div>
+                <nb-select outline status="info" class="bg-white form-control">
+                  <nb-option>cash</nb-option>
+                  <nb-option>card</nb-option>
+                </nb-select>
+              </div>
+            </div>
+            <div class="col-md-7 form-group">
+              <label>Card Details</label>
+              <input type="text" nbInput outline status="info" class="form-control bg-white"/>
+            </div>
+            <div class="col-md-5 form-group">
+              <label>Expiry Date</label>
+              <input type="date" nbInput outline status="info" class="form-control bg-white"/>
+            </div>
+            <div class="col-md-2 form-group">
+              <label>CVV</label>
+              <input type="text" nbInput outline status="info" class="form-control bg-white"/>
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+  <div class="row my-5">
+    <div class="col-12 d-flex justify-content-center align-items-center">
+      <button nbButton
+              outline status="info" size="giant" class="bg-white" routerLink="../checkout">Continue
+      </button>
+    </div>
+  </div>
+</section>

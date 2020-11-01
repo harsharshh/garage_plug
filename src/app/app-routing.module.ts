@@ -29,6 +29,18 @@ export const routes: Routes = [
         path: 'price',
         loadChildren: () => import('./modules/prices/prices.module').then(m => m.PricesModule),
       },
+      {
+        path: 'contact',
+        loadChildren: () => import('./modules/contact/contact.module').then(m => m.ContactModule),
+      },
+      {
+        path: 'checkout',
+        loadChildren: () => import('./modules/checkout/checkout.module').then(m => m.CheckoutModule),
+      },
+      {
+        path: 'service-no',
+        loadChildren: () => import('./modules/service-no/service-no.module').then(m => m.ServiceNoModule),
+      },
     ]
   },
   {
